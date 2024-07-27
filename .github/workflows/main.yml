@@ -33,7 +33,7 @@ jobs:
             # Run sonar-scanner
             - name: SonarQube Scan
               run: sonar-scanner
-                -Dsonar.host.url=${{ secrets.Sonar_URL }}
+                -Dsonar.host.url=${{ secrets.SONAR_URL }}
                 -Dsonar.login=${{ secrets.SONAR_TOKEN }}
                 -Dsonar.organization=${{ secrets.SONAR_ORGANIZATION }}
                 -Dsonar.projectkey=${{ secrets.SONAR_PROJECT_KEY }}
@@ -52,7 +52,7 @@ jobs:
               env:
                 SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
                 SONAR_HOST_URL: ${{ secrets.SONAR_URL }} # optional
-                
+
 
 
 
